@@ -1,7 +1,11 @@
-var sport = 'football';
-var id = 5;
-// Functions
-function circle(d) {
-    return 'The circumference is ' + Math.PI * d;
+"use strict";
+class Invoice {
+    constructor(c, d, a) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+    format() {
+        return `${this.client} owes KSH${this.amount} for ${this.details}`;
+    }
 }
-console.log(circle(12));

@@ -1,10 +1,16 @@
-let sport = 'football';
-let id = 5;
+class Invoice {
+  client: string;
+  details: string;
+  amount: number;
 
+  constructor(c: string, d: string, a: number){
+    this.client = c;
+    this.details = d;
+    this.amount = a;
+  }
 
-// Functions
-function circle(d: number): string {
-    return 'The circumference is ' + Math.PI * d
+  format() {
+    return `${this.client} owes KSH${this.amount} for ${this.details}`
+  }
 }
 
-console.log(circle(12));
